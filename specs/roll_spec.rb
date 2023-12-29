@@ -1,4 +1,4 @@
-require_relative '../roll'
+require_relative '../models/roll'
 
 describe Roll do
   context 'A roll' do

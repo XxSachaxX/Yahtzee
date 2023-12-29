@@ -1,4 +1,4 @@
-require_relative 'scoreboard'
+require_relative '../models/scoreboard'
 class Player
   attr_reader :name
   attr_accessor :scoreboard, :roll

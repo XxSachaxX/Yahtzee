@@ -1,4 +1,4 @@
-require_relative 'game'
+require_relative 'models/'
 require_relative 'roll_scorer'
 require_relative 'player'
 require_relative './game_loop_components/introduction'

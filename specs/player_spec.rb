@@ -1,4 +1,4 @@
-require_relative '../player'
+require_relative '../models/player'
 
 describe Player do
   it 'has a name' do

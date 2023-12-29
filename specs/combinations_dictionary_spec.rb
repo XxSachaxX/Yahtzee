@@ -1,4 +1,4 @@
-require_relative '../combinations_dictionary'
+require_relative '../models/combinations_dictionary'
 describe CombinationsDictionary do
   it 'contains a mapping of digits categories with the digit they represent' do
     expect(CombinationsDictionary.digit_categories).to eq({

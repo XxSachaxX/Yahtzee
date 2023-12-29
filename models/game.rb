@@ -1,4 +1,4 @@
-require_relative './roll'
+require_relative './/roll'
 
 class Game
   attr_reader :players

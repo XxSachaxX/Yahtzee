@@ -1,4 +1,4 @@
-require_relative '../../game'
+require_relative '../../models/game'
 require_relative '../../game_loop_components/main_loop'
 
 describe GameLoopComponents::MainLoop do

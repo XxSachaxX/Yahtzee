@@ -1,4 +1,4 @@
-require_relative 'combinations_dictionary'
+require_relative '../models/combinations_dictionary'
 require_relative 'roll'
 
 class RollScorer

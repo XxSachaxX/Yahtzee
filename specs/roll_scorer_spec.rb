@@ -1,5 +1,5 @@
-require_relative '../roll_scorer'
-require_relative '../roll'
+require_relative '../models/roll_scorer'
+require_relative '../models/roll'
 
 describe RollScorer do
   context 'when given a roll and a category' do

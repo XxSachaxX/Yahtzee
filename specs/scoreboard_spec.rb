@@ -1,4 +1,4 @@
-require_relative '../scoreboard'
+require_relative '../models/scoreboard'
 
 describe Scoreboard do
   it 'can be displayed in an ordered manner' do

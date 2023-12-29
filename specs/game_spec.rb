@@ -1,6 +1,6 @@
-require_relative '../game'
-require_relative '../roll'
-require_relative '../player'
+require_relative '../models/game'
+require_relative '../models/roll'
+require_relative '../models/player'
 
 describe Game do
   context 'A new game' do
