@@ -1,9 +1,9 @@
-require_relative 'models/'
+require_relative '../models/game'
 require_relative 'roll_scorer'
 require_relative 'player'
-require_relative './game_loop_components/introduction'
-require_relative './game_loop_components/main_loop'
-require_relative './game_loop_components/game_initializer'
+require_relative '../game_loop_components/introduction'
+require_relative '../game_loop_components/main_loop'
+require_relative '../game_loop_components/game_initializer'
 
 
 puts GameLoopComponents::Introduction.text
