@@ -5,7 +5,7 @@ module GameLoopComponents
       @game = game
     end
 
-    def text
+    def call
       puts 'The game has ended'
       puts 'Here are the results:'
       puts game.compute_final_scores

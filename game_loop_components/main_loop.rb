@@ -1,6 +1,7 @@
 require_relative './rolling_phase'
 require_relative './scoreboard_display'
 require_relative './category_choice_phase'
+require_relative './game_end'
 
 module GameLoopComponents
   class MainLoop
@@ -10,7 +11,7 @@ module GameLoopComponents
       @game = game
     end
 
-    def main_loop
+    def call
       until game.has_ended?
         RollingPhase.new(game).call
 

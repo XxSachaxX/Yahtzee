@@ -7,11 +7,11 @@ require_relative '../game_loop_components/game_initializer'
 require_relative '../game_loop_components/game_end'
 
 
-puts GameLoopComponents::Introduction.text
+puts GameLoopComponents::Introduction.call
 
 number_of_players = gets.chomp.to_i
 game = GameLoopComponents::GameInitializer.create_game(number_of_players)
 
 puts "Let's begin."
-GameLoopComponents::MainLoop.new(game).main_loop
-puts GameLoopComponents::GameEnd.new(game).text
+GameLoopComponents::MainLoop.new(game).call
+puts GameLoopComponents::GameEnd.new(game).call
