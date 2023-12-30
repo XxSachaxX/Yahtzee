@@ -30,21 +30,30 @@ describe Scoreboard do
   end
 
   context 'when given a category and a score' do
-    context 'if no points have been written down for this category' do
-      it 'should write it down' do
-        scoreboard = Scoreboard.new
-        scoreboard.write(:ones, 2)
+    context 'if the category exists' do
+      context 'if points have already been written down for this category' do
+        it 'should not write it down' do
+          scoreboard = Scoreboard.new
+          scoreboard.write(:ones, 2)
 
-        expect(scoreboard.categories[:ones]).to eq(2)
+          expect { (scoreboard.write(:ones, 2)) }.to raise_error(Scoreboard::AlreadyWrittenForCategoryError)
+        end
+      end
+
+      context 'if no points have been written down for this category' do
+        it 'should write it down' do
+          scoreboard = Scoreboard.new
+          scoreboard.write(:ones, 2)
+
+          expect(scoreboard.categories[:ones]).to eq(2)
+        end
       end
     end
 
-    context 'if points have already been written down for this category' do
-      it 'should not write it down' do
+    context 'if the category does not exist' do
+      it 'raises an error' do
         scoreboard = Scoreboard.new
-        scoreboard.write(:ones, 2)
-
-        expect { (scoreboard.write(:ones, 2)) }.to raise_error(Scoreboard::AlreadyWrittenForCategoryError)
+        expect { scoreboard.write(:umpalumpa, 2) }.to raise_error(Scoreboard::CategoryDoesNotExistError)
       end
     end
   end

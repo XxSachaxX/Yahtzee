@@ -1,6 +1,9 @@
+require_relative 'combinations_dictionary'
+
 class Scoreboard
   attr_accessor :categories
   class AlreadyWrittenForCategoryError < StandardError; end
+  class CategoryDoesNotExistError < StandardError; end
 
   def initialize
     @categories = init_categories
@@ -28,6 +31,7 @@ class Scoreboard
 
   def write(category, points)
     raise AlreadyWrittenForCategoryError, 'You already wrote down a score in this category, please try an other one' unless writeable?(category)
+    raise CategoryDoesNotExistError, 'This category does not exist. Please pick one that does.' unless category_exists?(category)
 
     categories[category.to_sym] = points
   end
@@ -49,5 +53,9 @@ class Scoreboard
 
   def writeable?(category)
     categories[category].nil?
+  end
+
+  def category_exists?(category)
+    CombinationsDictionary.categories.include?(category)
   end
 end

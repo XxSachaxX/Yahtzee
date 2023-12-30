@@ -21,6 +21,9 @@ module GameLoopComponents
         rescue Scoreboard::AlreadyWrittenForCategoryError
           puts 'You have already written points in this category. Please select an other one'
           retry
+        rescue Scoreboard::CategoryDoesNotExistError
+          puts 'This category does not exist. Please select one that does'
+          retry
         end
         ScoreboardDisplay.new(game).call
       end

@@ -1,4 +1,24 @@
 class CombinationsDictionary
+  
+  def self.categories
+    [
+      :ones,
+      :twos,
+      :threes,
+      :fours,
+      :fives,
+      :sixes,
+      :pair,
+      :two_pairs,
+      :three_of_a_kind,
+      :four_of_a_kind,
+      :small_straight,
+      :large_straight,
+      :full_house,
+      :yahtzee,
+      :chance
+    ]
+  end
   def self.digit_categories
     {
       ones: 1,
