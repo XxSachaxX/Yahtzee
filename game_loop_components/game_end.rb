@@ -10,7 +10,7 @@ module GameLoopComponents
       puts 'Here are the results:'
       puts game.compute_final_scores
       puts "The winner is #{game.winner.name}, congratulation to you !"
-      puts 'Hi hope you all had a nice time, I am looking forward to our next game'
+      puts 'I hope you all had a nice time, I am looking forward to our next game'
     end
   end
 end
