@@ -19,6 +19,11 @@ class CombinationsDictionary
       :chance
     ]
   end
+
+  def self.displayable_categories
+    "ones\ntwos\nthrees\nfours\nfives\nsixes\npair\ntwo pairs\ntwos\nthree of a kind\nfour of a kind\nsmall_straight\nlarge_straight\nfull_house\nyahtzee\nchance\n"
+  end
+
   def self.digit_categories
     {
       ones: 1,
