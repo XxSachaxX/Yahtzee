@@ -40,7 +40,7 @@ class Scoreboard
       formatted_category.gsub!('[', '')
       formatted_category.gsub!(']', '')
       formatted_category.gsub!('_', ' ')
-      formatted_category.gsub!('nil', '0')
+      formatted_category.gsub!('nil', 'empty')
       string.concat("#{formatted_category}\n")
     end
   end

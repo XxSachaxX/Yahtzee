@@ -4,7 +4,7 @@ describe Scoreboard do
   it 'can be displayed in an ordered manner' do
     scoreboard = Scoreboard.new
 
-    expect(scoreboard.show).to eq("ones: 0\ntwos: 0\nthrees: 0\nfours: 0\nfives: 0\nsixes: 0\npair: 0\ntwo pairs: 0\nthree of a kind: 0\nfour of a kind: 0\nsmall straight: 0\nlarge straight: 0\nfull house: 0\nyahtzee: 0\nchance: 0\n")
+    expect(scoreboard.show).to eq("ones: empty\ntwos: empty\nthrees: empty\nfours: empty\nfives: empty\nsixes: empty\npair: empty\ntwo pairs: empty\nthree of a kind: empty\nfour of a kind: empty\nsmall straight: empty\nlarge straight: empty\nfull house: empty\nyahtzee: empty\nchance: empty\n")
   end
 
   context 'when created' do
